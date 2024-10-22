@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>SVM-NAV: CONSTRAINT-AWARE VISION-LANGUAGE NAVIGATION WITH SUPERPIXEL VALUE MAP</title>
+  <title>基于视觉的机械臂抓取</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">SVM-NAV: CONSTRAINT-AWARE VISION-LANGUAGE NAVIGATION WITH SUPERPIXEL VALUE MAP</h1>
+            <h1 class="title is-2 publication-title">基于视觉的机械臂抓取</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -62,51 +62,13 @@
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
                   </span> -->
-                  <p>Anonymous Author</p>
+                  <p>陈可涵  大连理工大学</p>
                   </div>
 
                   <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block">Institution Name<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div> -->
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="#" onclick="alert('Comming soon!')" class="external-link button is-normal is-rounded is-dark">
-                        <!-- <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark"> -->
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <!-- <a href="#" onclick="alert('Comming soon!')" class="external-link button is-normal is-rounded is-dark"> -->
-                        <a href="https://www.dropbox.com/scl/fi/blizyynuwvsphs9bz4qek/Supplementary.zip?rlkey=5vjtlduybwtnkf957x60qhdff&st=tuwlks5r&dl=0" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-archive"></i>
-                        </span>
-                        <span>Supplementary</span>
-                      </a>
-                    </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <!-- <a href="#" onclick="alert('Comming soon!')" class="external-link button is-normal is-rounded is-dark"> -->
-                    <a href="https://anonymous.4open.science/r/SVM-Nav-code-E289" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
 
                 <!-- ArXiv abstract Link -->
                 <!-- <span class="link-block">
@@ -131,16 +93,23 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">摘要</h2>
         <div class="content has-text-justified">
           <p>
-            We present SVM-Nav, a training-free approach for Vision-Language Navigation in Continuous Environments (VLN-CE).
-            SVM-Nav reframes VLN-CE as a sequential sub-instruction completion problem, continuously translating sub-instructions into navigation plans via a cross-modal value map.
-            Central to our approach are the Sub-Instruction Manager (SIM) and Superpixel Value Map (SVM).
-            SIM decomposes instructions into sub-instructions and tracks navigation progress through automatic sub-instruction switching.
-            In parallel, SVM generates a value map from vision-language model prompts based on landmarks identified by SIM, further refined through superpixel clustering to improve navigation stability.
-            SVM-Nav achieves the state-of-the-art on two VLN-CE benchmarks, surpassing the second-best method by 12\% on R2R-CE and 13\% on RxR-CE in terms of Success Rate on the validation unseen split.
-            Furthermore, SVM-Nav demonstrates robustness in real-world robot deployments across diverse indoor scenes and instructions, highlighting its potential for practical applications.
+            近年来机械臂在各领域展现出了实用价值，对机械臂进行运动控制可使其完成一系
+            列任务。机械臂抓取是运动控制的基本模块，也是本文讨论的重点。早期的机械臂只能
+            按照程序完成指定的动作，随着人工智能等技术的发展，机械臂能基于视觉完成抓取任
+            务。因此，研究基于视觉的机械臂运动控制具有重要的研究价值。
+            本文研究了不同相机标定法下抓取算法的效果。分别提出并实验了基于图像处理的
+            视觉抓取算法和基于深度学习的视觉抓取算法。
+            本文针对眼在手上的相机标定法进行了基于图像处理的视觉抓取实验。通过图像处
+            理技术实现对不同颜色物体的识别与定位，利用 ROS 中的运动学求解器实现机械臂运动
+            控制，完成抓取。该方法具有可行性但存在对光照敏感、工作空间利用不充分、依赖抓
+            取地图、可抓取物体有限等问题。
+            为克服上述问题，本文创新性地利用深度相机及神经网络模型构建了基于深度学习
+            的视觉抓取算法。本文根据机械臂的几何模型使用 Python 编写运动学求解器并计算可
+            达工作空间，进行了基于 PyBullet 的仿真实验和实物测试。结果表明，该方法有更高
+            的准确性、更好的鲁棒性、更强的泛化性。
           </p>
         </div>
       </div>
@@ -149,190 +118,92 @@
 </section>
 <!-- End paper abstract -->
 
+
 <section class="hero teaser" style="padding-top: 40px;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method Overview</h2>
+    <h2 class="title is-3 has-text-centered">运动学建模</h2>
     <div class="hero-body">
-      <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
+      <img src="static/images/kinematics.png" alt="MY ALT TEXT"/>
       <div class="content has-text-justified">
-        <p>
-          Overview of the proposed SVM-Nav. (a) The Sub-Instruction Manager decomposes the
-          instruction into a sequence of sub-instructions and plans object constraints, location constraints and
-          direction constraints for each of them. (b) During navigation, SVM-Nav builds a value map and uses
-          the superpixel clustering method to segment it into regions. It automatically switches constraints and
-          chooses the most promising region's geometric center as waypoints.
-        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero teaser">
+<section class="hero teaser" style="padding-top: 40px;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Framework of SVM-Nav </h2>
+    <h2 class="title is-3 has-text-centered">方法框架</h2>
     <div class="hero-body">
-      <img src="static/images/framework.png" alt="MY ALT TEXT"/>
+      <img src="static/images/visualgrasp_framework.png" alt="MY ALT TEXT"/>
       <div class="content has-text-justified">
-        <p>
-          We present SVM-Nav, a training-free approach for VLN-CE. Within each episode, a
-          Sub-Instruction Manager decomposes instructions and conducts constraint-aware sub-instruction
-          switching. The active sub-instructions are translated into a Superpixel Value Map, which abstracts
-          the environment and generates navigation plans. These plans are then executed by classical control
-          algorithms, guiding the agent to complete each sub-instruction until the episode terminates.
-        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered" style="font-size: 36px; font-weight: bold;">Visualization in Simulation</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <h2 class="subtitle" style="font-size: 24px; font-weight: bold;">
-            Navigation on episode 1313 with Superpixel-based waypoint selection.
-          </h2>
-          <h2 class="subtitle">
-            Instruction: Go straight. Pass the stairs on the right and continue straight. When you get to the stairs going up pass those as well. 
-            Go into the room with the couches and then turn right. wait near the glass table with white chairs.
-          </h2>
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <!-- Your video here -->
-            <source src="static/videos/eps1313_superpixel.mp4"
-            type="video/mp4">
-          </video>
-          <h2 class="subtitle">
-            SVM avoids focusing solely on local high values. 
-            Instead, it considers the global value map, allowing it to navigate correctly when switching sub-instructions.
-          </h2>
-        </div>
-        
-        <div class="item item-video2">
-          <h2 class="subtitle" style="font-size: 24px; font-weight: bold;">
-            Navigation on episode 1313 with frontier-based waypoint selection.
-          </h2>
-          <h2 class="subtitle">
-            Instruction: Go straight. Pass the stairs on the right and continue straight. When you get to the stairs going up pass those as well. 
-            Go into the room with the couches and then turn right. wait near the glass table with white chairs.
-          </h2>
-          <video poster="" id="tree" autoplay controls muted loop height="100%">
-            <!-- Your video here -->
-            <source src="static/videos/eps1313_fbe2.mp4"
-            type="video/mp4">
-          </video>
-          <h2 class="subtitle">
-            The FBE-based waypoint selection method navigates
-            correctly during the first sub-instruction. However, upon reaching the second sub-instruction, the
-            landmark prompt changes to “room,” causing the value map, initially based on the previous landmark
-            prompt “stairs”, to decay as new values are updated.
-            Then the agent chooses a left frontier, which has the highest value among the available options, 
-            but the correct path is to walk straight toward the open area with the stairs.
-          </h2>
-        </div>
+<section class="hero teaser" style="padding-top: 40px;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">三维建模与仿真</h2>
+    <div class="hero-body">
+      <img src="static/images/solidworks.png" alt="MY ALT TEXT"/>
+      <div class="content has-text-justified">
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Real-world Experiments</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/yib2o-iCyR8" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Go towards the plant, turn right, walk along the wall then stop near the World Cup Trophy.
-          </h2>
-        </div>
-        
-        <div class="item item-video2">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/vmNvs0y39OE" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Walk towards the robot. 
-          </h2>
-        </div>
-        
-        <div class="item item-video3">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/X-I-RcRP9ZY" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Walk out to the corridor, and stop in front of the poster.
-          </h2>
-        </div>
-        
-        <div class="item item-video4">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/8yPxrbq-hz4" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Walk out of the door then stop in front of the plant.
-          </h2>
-        </div>
-        
-        <div class="item item-video5">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/4wQRoO3epDo" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Turn left then walk towards the signboard and wait by the elevator.
-          </h2>
-        </div>
-        
-        <div class="item item-video6">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/yW4tqnk5Zqw" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Go to the door.
-          </h2>
-        </div>
-        
-        <div class="item item-video7">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/0Y8bZxwzJ3s" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Walk towards the living room then stop beside the couch.
-          </h2>
-        </div>
-        
-        <div class="item item-video8">
-          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/72dDIFPAbhY" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-          <h2 class="subtitle has-text-centered">
-            Instruction: Turn slightly right and walk into the meeting room, step forward then stop in front of the table..
-          </h2>
-        </div>
-        
+<section class="hero teaser" style="padding-top: 40px;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">三维建模与仿真</h2>
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/visualgrasp_pybullet.mp4"
+        type="video/mp4">
+      </video>
+      <div class="content has-text-justified">
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<section class="hero teaser" style="padding-top: 40px;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">实验平台</h2>
+    <div class="hero-body">
+      <img src="static/images/deploy-setting.png" alt="MY ALT TEXT"/>
+      <div class="content has-text-justified">
       </div>
     </div>
-  </section> -->
-<!--End paper poster -->
+  </div>
+</section>
+
+<section class="hero teaser" style="padding-top: 40px;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">ROS框架</h2>
+    <div class="hero-body">
+      <img src="static/images/ros.png" alt="MY ALT TEXT"/>
+      <div class="content has-text-justified">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser" style="padding-top: 40px;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">真机实验</h2>
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/visualgrasp.mp4"
+        type="video/mp4">
+      </video>
+      <div class="content has-text-justified">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!--BibTex citation -->
